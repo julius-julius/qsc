@@ -8,7 +8,7 @@ The first step is to install the requisite C++ compilers and packages and compil
 ### Compilers and Packages
 
 The `g++` compiler, and the `libcln` and `libcln-dev` packages are necessary to be installed. Other compliers may be used depending on taste and packages may be installed using a package manager. 
-In order to use the packages on a Windows operating system, one needs to install a Windows Subsystem for Linux (WSL), though one must bare in mind to type `wsl` before he Shell command. Below we present the steps to install the above on a Debian linux system. The following commands should be run on the terminal 
+In order to use the packages on a Windows operating system, one needs to install a Windows Subsystem for Linux (WSL), though one must bare in mind to type `wsl` before any Shell command. Below we present the steps to install the above on a Debian linux system. The following commands should be run on the terminal 
 
 `> sudo apt install g++`
 
@@ -38,11 +38,11 @@ In order for the executables to be compatible with the Mathematica notebooks in 
 
 Once compiled, ensure that the exeutable file and the Mathematica notebook are in the same directory. The C++ sourcecode needs to be compiled only once. 
 
-## Execution
+## Execution and Automation
 
-In order to ensure that everything goes smoothly, we recommend to test the executables by following these three steps. 
+In order to ensure that everything goes smoothly, and the code was compiled properly, we recommend to test the executables by running the corresponding Mathematica notebooks in /cores. 
 
-### Step 1: Execute from Mathematica notebook
+### Execute from Mathematica notebook
 
 Ensure that the executable file is in the same directry as the Mathematica notebooks available in the /core directory. Depending on your application, you should use
 
@@ -51,4 +51,6 @@ Ensure that the executable file is in the same directry as the Mathematica noteb
 - *geneven_example.nb* for type III states
 - *genPP_example.nb* for type IV states
 
-Run the corresponding Mathematica notebook
+Run the corresponding Mathematica notebook. If it runs without errors, then this step is successful. The specifics of the inputs and outputs of the run may be read from the comments in the Mathematica notebook.
+
+### Automation using Python
