@@ -35,3 +35,20 @@ In order for the executables to be compatible with the Mathematica notebooks in 
 - For type II states, use *LReven_example.out*
 - For type III states, use *geneven_example.out*
 - For type IV states, use *genPP_example.out*
+
+Once compiled, ensure that the exeutable file and the Mathematica notebook are in the same directory. The C++ sourcecode needs to be compiled only once. 
+
+## Execution
+
+In order to ensure that everything goes smoothly, we recommend to test the executables by following these three steps. 
+
+### Step 1: Execute from Mathematica notebook
+
+Ensure that the executable file is in the same directry as the Mathematica notebooks available in the /core directory. Depending on your application, you should use
+
+- *LReven_example.nb* for type I states
+- *LReven_example.nb* for type II states
+- *geneven_example.nb* for type III states
+- *genPP_example.nb* for type IV states
+
+Run the corresponding Mathematica notebook
