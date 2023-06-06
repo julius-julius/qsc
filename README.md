@@ -18,4 +18,20 @@ In order to use the packages on a Windows operating system, one needs to install
 
 ### Compilation
 
-In the /core directory, there are four *.cpp* 
+In the /core directory, there are four *.cpp* codes. Each code pertains to a particular type of state in planar N = 4 supersymmetric Yang-Mills theory (SYM):
+
+- For type I states, use *LReven_example.cpp*
+- For type II states, use *LReven_example.cpp*
+- For type III states, use *geneven_example.cpp*
+- For type IV states, use *genPP_example.cpp*
+
+To compile any of the above codes, use the following command where *source.cpp* is the C++ file, and *executable.out* is the executable output file
+
+`> g++ source.cpp -lm -lcln -o executable.out`
+
+In order for the executables to be compatible with the Mathematica notebooks in the /core directory, the names of the execulatbles in the four cases should be as follows.
+
+- For type I states, use *LReven_example.out*
+- For type II states, use *LReven_example.out*
+- For type III states, use *geneven_example.out*
+- For type IV states, use *genPP_example.out*
