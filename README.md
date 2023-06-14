@@ -1,5 +1,5 @@
 # qsc
-A numerical non-perturbative quantum spectral curve solver and database of non-perturbative values of the scaling dimensions of states/operators of planar ${\cal N} = 4$ supersymmetric Yang-Mills theory (SYM), in a wide range of the 't Hooft coupling.
+A numerical non-perturbative quantum spectral curve solver and database of non-perturbative values of the scaling dimensions of states/operators of planar ${\cal N} = 4$ supersymmetric Yang-Mills theory (SYM), in a wide range of the 't Hooft coupling $g\equiv \sqrt{\lambda}/4\pi \equiv g\_{\tt YM}^2 N /4\pi$, where $g_{\tt YM}$ is the Yang-Mills coupling and $N-1$ is the rank of the gauge group ${\rm SU}(N)$.
 
 ## Structure of Repository
 
@@ -31,7 +31,7 @@ is stored in the *.mx* file called
 
 *numerical\_data\_Delta0*$\\,\Delta_0\\,$*\_b1*$\\,n\_{{\bf b}\_1\\,}$*\_b2*$\\,n\_{{\bf b}\_2}\\,$*\_f1*$\\,n\_{{\bf f}\_1}\\,$*\_f2*$\\,n\_{{\bf f}\_2}\\,$*\_f3*$\\,n\_{{\bf f}\_3}\\,$*\_f4*$\\,n\_{{\bf f}\_4\\,}$*\_a1*$\\,n\_{{\bf a}\_1}\\,$*\_a2*$\\,n\_{{\bf a}\_2}\\,$*\_sol*$\\,{\tt sol}\\,$*.mx*.
 
-The file contains a $2\times 2$ array `dataGH`. Each element of of this array is a tuple $(g,\Delta)$ where $g$ is the value of the 't Hooft coupling $g\equiv \sqrt{\lambda}/4\pi \equiv g\_{\tt YM}^2 N /4\pi$, and $\Delta$ is the value of the dimension of the state at that value of $g$. The precision of $\Delta$ is **... (J: to be added)**
+The file contains a $2\times 2$ array `dataGH`. Each element of of this array is a tuple $(g,\Delta)$ where $g$ is the value of the 't Hooft coupling, and $\Delta$ is the value of the dimension of the state at that value of $g$. The precision of $\Delta$ is **... (J: to be added)**
 
 Depending on the type of the state/operator, we are able to provide data for different ranges in $g$.
 
@@ -132,10 +132,10 @@ Select the *.ipynb* file according to the type of state which you wish to run.
 
 Before running the *.ipynb* ensure that all the paths are correctly adjusted based on your specific project organisation. The default path settings will work for a project that has the same strucutre as this repository, and should work without change if you pull this repository to your local system. There are various places where the path needs to be adjusted. We list them below:
 
-- In */run/TypeI_run.ipynb*, you need to specify the path to *TypeI_module.ipynb*. By default *TypeI_module.ipynb* is located in */auxiliary* (same for *.ipynb* files of other types of states)
-- In */auxiliary/TypeI_module.ipynb*, you need to specify the path to *TypeI_run.wls*. By default *TypeI_script.wls* is located in */auxiliary* (same for *.ipynb* files of other types of states)
-- In */auxiliary/TypeI_script.wls* you need to specify the path to *TypeI_exec.out*, *TypeI_package.wl* and the location of your output data. By default *TypeI_exec.out* is located in */core*, *TypeI_package.wl* is located in */auxiliary*, and the output location is */data/output*.
-- In */auxiliary/TypeI_package.wl* you need to specify the location of the perturbative data. By default the perturbative data is located in */data/perturbative*.
+- In */run/TypeI_run.ipynb*, you need to specify the path to *TypeI_module.ipynb*. By default *TypeI_module.ipynb* is located in */auxiliary* (same for *.ipynb* files of other types of states).
+- In */auxiliary/TypeI_module.ipynb*, you need to specify the path to *TypeI_run.wls*. By default *TypeI_script.wls* is located in */auxiliary* (same for *.ipynb* files of other types of states).
+- In */auxiliary/TypeI_script.wls* you need to specify the path to *TypeI_exec.out*, *TypeI_package.wl* and the location of your output data. By default *TypeI_exec.out* is located in */core*, *TypeI_package.wl* is located in */auxiliary*, and the output location is */data/output* (same for *.ipynb* files of other types of states).
+- In */auxiliary/TypeI_package.wl* you need to specify the location of the perturbative data. By default the perturbative data is located in */data/perturbative* (same for *.ipynb* files of other types of states).
 
 To initialise a state with a given $\texttt{State ID}$ you must ensure that there is a *.mx* file with perturbative data that you will need to initialise the numerics. For the 219 states with bare dimenion $\Delta_0\leq 6$, this is already precomputed, and such a file is available in */data/perturbative*. For states with $\Delta_0>6$, you can generate this data by running **(J: to be added)**. By default, the perturbative data generated will be stored in */data/perturbative*.
 
