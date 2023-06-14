@@ -72,7 +72,10 @@ The first step is to install the requisite C++ compilers and packages and compil
 ### Compilers and Packages
 
 The `g++` compiler, and the `libcln` and `libcln-dev` packages are necessary to be installed. Other compliers may be used depending on taste and packages may be installed using a package manager. 
-In order to use the packages on a Windows operating system, one needs to install a Windows Subsystem for Linux (WSL), though one must bare in mind to type `wsl` before any Shell command. Below we present the steps to install the above on a Debian linux system. The following commands should be run on the terminal 
+
+**Debian Linux**
+
+Below we present the steps to install the above on a Debian linux system. The following commands should be run on the terminal 
 
 `> sudo apt install g++`
 
@@ -80,7 +83,18 @@ In order to use the packages on a Windows operating system, one needs to install
 
 `> sudo apt install libcln-dev`
 
-**(NS: add also for mac plzzzz)**
+**Mac**
+
+Below we present the steps to install the above on a Mac system. First, you need to install a package manager such as Homebrew (https://brew.sh/). In the sequel we assume that Homebrew is installed. In the terminal, run
+
+`> brew install g++`
+
+`> brew install cln `
+
+**Windows**
+
+In order to use the packages on a Windows operating system, one needs to install a Windows Subsystem for Linux (WSL), though one must bare in mind to type `wsl` before any Shell command. 
+
 
 ### Compilation
 
@@ -144,3 +158,5 @@ To initialise a state with a given $\texttt{State ID}$ you must ensure that ther
 **Running**
 
 In order to run a state with a given $\texttt{State ID}$, open the *.ipynb* associted with the type of state as a Jupyter notebook (https://jupyter.org/). Then specify the $\texttt{State ID}$ of the state which you want to run, follow the comments in the noteboook and run. If all the paths are specified properly, and the perturbative data exists, then it should run smoothly, and automatically start to produce spectral data for that state.
+
+**(Mention Anaconda, Homebrew and Mathematica installation)**
