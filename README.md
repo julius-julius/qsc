@@ -3,7 +3,7 @@ A numerical non-perturbative quantum spectral curve solver and database of non-p
 
 ## Structure of Repository
 
-This repository has 4 directories: /core, /auxiliary, /run and /data. 
+This repository has 6 directories: /core, /auxiliary, /run, /data, /seed and /demo. 
 
 ### /core
 
@@ -56,6 +56,15 @@ $\texttt{State ID}:    {}\_{\Delta\_0}[n\_{{\bf b}\_1}\\;n\_{{\bf b}\_2}\\;n\_{{
 is an *.mx* file called
 
 *numerical\_data\_Delta0*$\\,\Delta_0\\,$*\_b1*$\\,n\_{{\bf b}\_1\\,}$*\_b2*$\\,n\_{{\bf b}\_2}\\,$*\_f1*$\\,n\_{{\bf f}\_1}\\,$*\_f2*$\\,n\_{{\bf f}\_2}\\,$*\_f3*$\\,n\_{{\bf f}\_3}\\,$*\_f4*$\\,n\_{{\bf f}\_4\\,}$*\_a1*$\\,n\_{{\bf a}\_1}\\,$*\_a2*$\\,n\_{{\bf a}\_2}\\,$*\_sol*$\\,{\tt sol}\\,$*.mx*.
+
+### /seed
+
+This directory contains a Mathematica notebook **(J: to be added)**
+
+
+### /demo
+
+This directory contains a Mathematica notebook **(J: to be added)**
 
 ## Installation and Compilation
 
