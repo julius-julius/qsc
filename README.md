@@ -80,6 +80,8 @@ In order to use the packages on a Windows operating system, one needs to install
 
 `> sudo apt install libcln-dev`
 
+**(NS: add also for mac plzzzz)**
+
 ### Compilation
 
 In the */core* directory, there are four *.cpp* files. Each code pertains to a particular type of state in planar ${\cal N} = 4$ SYM:
