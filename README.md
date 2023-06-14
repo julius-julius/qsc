@@ -112,11 +112,11 @@ In the */core* directory, there are four *.cpp* files. Each code pertains to a p
 - For type III states, use *TypeIII_core.cpp*
 - For type IV states, use *TypeIV_core.cpp*
 
-To compile any of the above, use the following command where *source.cpp* is the C++ file, and *executable.out* is the executable output file
+To compile any of the above, on Linux and Mac, use the following command where *source.cpp* is the C++ file, and *executable.out* is the executable output file
 
 `> g++ source.cpp -lm -lcln -o executable.out`
 
-In order for the executables to be compatible with the Mathematica notebooks in the */core* directory, the names of the execulatbles in the four cases should be as follows.
+You will need to anticipate with `wsl` for Windows. In order for the executables to be compatible with the Mathematica notebooks in the */core* directory, the names of the execulatbles in the four cases should be as follows.
 
 - For type I states, use *TypeI_exec.out*
 - For type II states, use *TypeII_exec.out*
@@ -127,7 +127,7 @@ Once compiled (it should compile without errors, warnings are OK), ensure that t
 
 ## Execution and Automation
 
-In order to ensure that everything goes smoothly, and the code was compiled properly, we recommend to test the executables by running the corresponding Mathematica notebooks in */core*. 
+In order to ensure that everything goes smoothly, and the code was compiled properly, we recommend to test the executables by running the corresponding Mathematica notebooks in */core*. We assume that the user has downloaded Mathematica (https://www.wolfram.com/mathematica/).
 
 ### Execute from Mathematica notebook
 
@@ -141,6 +141,12 @@ Ensure that the executable file is in the same directry as the Mathematica noteb
 Run the corresponding Mathematica notebook. If it runs without errors, then this step is successful. The specifics of the inputs and outputs of the run may be read from the comments in the Mathematica notebook.
 
 ### Automation using Python
+
+In order to run the *.ipynb* files, you will need to install Jupyter notebook (https://jupyter.org/). You can download it from the website or from distributions such as Anaconda (https://www.anaconda.com/). In order to open a Jupyter notebook, on Linux and Mac, you should type the following in the terminal
+
+`jupyter notebook`
+
+For Windows, you will need to locate the Jupyter notebook icon using the graphical user interface, and click on it. This command should open a file navigator on your browser, and you will need to navidate to the location of the */run* directory.
 
 The directory */run* contains four *.ipynb* files, which run and automatically manage the hyperparameters of a particular state:
 
