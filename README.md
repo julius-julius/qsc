@@ -93,7 +93,14 @@ Below we present the steps to install the above on a Mac system. First, you need
 
 **Windows**
 
-In order to use the packages on a Windows operating system, one needs to install a Windows Subsystem for Linux (WSL), though one must bare in mind to type `wsl` before any Shell command. 
+In order to use the packages on a Windows operating system, one needs to install a Windows Subsystem for Linux (WSL) (https://learn.microsoft.com/en-us/windows/wsl/install). Then all linux programs can be executed from the Windows PowerShell. The only difference
+with respect to usual linux is that each command should be anticipated by typing `wsl`. Run the following commands on the Windows PowerShell
+
+`> wsl sudo apt install g++`
+
+`> wsl sudo apt install libcln6 `
+
+`> wsl sudo apt install libcln-dev`
 
 
 ### Compilation
