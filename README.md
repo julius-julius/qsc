@@ -137,4 +137,8 @@ Before running the *.ipynb* ensure that all the paths are correctly adjusted bas
 - In */auxiliary/TypeI_script.wls* you need to specify the path to *TypeI_exec.out*, *TypeI_package.wl* and the location of your output data. By default *TypeI_exec.out* is located in */core*, *TypeI_package.wl* is located in */auxiliary*, and the output location is */data/output*.
 - In */auxiliary/TypeI_package.wl* you need to specify the location of the perturbative data. By default the perturbative data is located in */data/perturbative*.
 
-you there is a *.mx* file with perturbative data that you will need to initialise the numerics. 
+To initialise a state with a given $\texttt{State ID}$ you must ensure that there is a *.mx* file with perturbative data that you will need to initialise the numerics. For the 219 states with bare dimenion $\Delta_0\leq 6$, this is already precomputed, and such a file is available in */data/perturbative*. For states with $\Delta_0>6$, you can generate this data by running **(J: to be added)**. By default, the perturbative data generated will be stored in */data/perturbative*.
+
+**Running**
+
+In order to run a state with a given $\texttt{State ID}$, open the *.ipynb* associted with the type of state as a Jupyter notebook (https://jupyter.org/). Then specify the $\texttt{State ID}$ of the state which you want to run, follow the comments in the noteboook and run. If all the paths are specified properly, and the perturbative data exists, then it should run smoothly, and automatically start to produce spectral data for that state.
