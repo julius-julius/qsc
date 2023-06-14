@@ -170,4 +170,4 @@ To initialise a state with a given $\texttt{State ID}$ you must ensure that ther
 
 **Running**
 
-In order to run a state with a given $\texttt{State ID}$, open the *.ipynb* associted with the type of state as a Jupyter notebook (https://jupyter.org/). Then specify the $\texttt{State ID}$ of the state which you want to run, follow the comments in the noteboook and run. If all the paths are specified properly, and the perturbative data exists, then it should run smoothly, and automatically start to produce spectral data for that state.
+In order to run a state with a given $\texttt{State ID}$, open the *.ipynb* associted with the type of state. Then specify the $\texttt{State ID}$ of the state which you want to run, follow the comments in the noteboook and run. If all the paths are specified properly, and the perturbative data exists, then it should run smoothly, and automatically start to produce spectral data for that state.
