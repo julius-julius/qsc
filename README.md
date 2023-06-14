@@ -1,6 +1,31 @@
 # qsc
-A numerical non-perturbative quantum spectral curve solver and database of states.
+A numerical non-perturbative quantum spectral curve solver and database of non-perturbative values of the scaling dimensions of states/operators of planar ${\cal N} = 4$ supersymmetric Yang-Mills theory (SYM), in a wide range of the 't Hooft coupling.
 
+## Structure of Repository
+
+This repository has 4 directories: /core, /auxiliary, /run and /data. 
+
+### /core
+
+This directory containt the C++ source-codes, for the various types of local opearators in planar ${\cal N =}$ 4 SYM.
+
+### /auxiliary
+
+This directory contains Mathematica and Python packages/modules/scripts which assist in automation and parameter management.
+
+### /run
+
+This directory contains the *.ipnb* file, which is the main interface through which one is able to run the numerics.
+
+### /data
+
+This directory contains 3 sub-directories: /numerical, /perturbative and /output
+
+**/numerical**
+
+This sub-directory contains precomputed scaling dimensions for all 219 states in ${\cal N =}$ 4 SYM with bare dimension $\Delta_0 \leq 6$, in a wide range of the 't Hooft coupling. This data is readily available for anyone to use in their research. The spectral data for a state with $\texttt{State ID}:    {}\_{\Delta\_0}[n\_{{\bf b}\_1}\\;n\_{{\bf b}\_2}\\;n\_{{\bf f}\_1}\\;n\_{{\bf f}\_2}\\;n\_{{\bf f}\_3}\\;n\_{{\bf f}\_4}\\;n\_{{\bf a}\_1}\\;n\_{{\bf a}\_2}]\_{\tt sol}$ is stored in the 
+
+ 
 ## Installation and Compilation
 
 The first step is to install the requisite C++ compilers and packages and compile the C++ code in the /core directory.
@@ -18,7 +43,7 @@ In order to use the packages on a Windows operating system, one needs to install
 
 ### Compilation
 
-In the /core directory, there are four *.cpp* codes. Each code pertains to a particular type of state in planar N = 4 supersymmetric Yang-Mills theory (SYM):
+In the /core directory, there are four *.cpp* codes. Each code pertains to a particular type of state in planar ${\cal N} = 4$ SYM:
 
 - For type I states, use *TypeI_core.cpp*
 - For type II states, use *TypeII_core.cpp*
