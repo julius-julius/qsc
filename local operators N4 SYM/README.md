@@ -3,7 +3,7 @@ A numerical non-perturbative quantum spectral curve solver and database of non-p
 
 ## Structure of Repository
 
-This repository has 6 directories: */core*, */auxiliary*, */run*, */data*. 
+This repository has 4 directories: */core*, */auxiliary*, */run*, */data*. 
 
 ### */core*
 
