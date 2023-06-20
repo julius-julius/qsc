@@ -1,9 +1,9 @@
-# qsc
+# Fast QSC Solver for local operators in ${\cal N} = 4$ supersymmetric Yang-Mills theory
 A numerical non-perturbative quantum spectral curve solver and database of non-perturbative values of the scaling dimensions of states/operators of planar ${\cal N} = 4$ supersymmetric Yang-Mills theory (SYM), in a wide range of the 't Hooft coupling $g\equiv \sqrt{\lambda}/4\pi \equiv g\_{\tt YM}^2 N /4\pi$, where $g_{\tt YM}$ is the Yang-Mills coupling and $N-1$ is the rank of the gauge group ${\rm SU}(N)$.
 
 ## Structure of Repository
 
-This repository has 6 directories: */core*, */auxiliary*, */run*, */data*, */seed* and */demo*. 
+This repository has 6 directories: */core*, */auxiliary*, */run*, */data*. 
 
 ### */core*
 
@@ -23,13 +23,17 @@ This directory contains 3 sub-directories: */numerical*, */perturbative* and */o
 
 ***/numerical***
 
-This sub-directory contains precomputed scaling dimensions for all 219 states in ${\cal N =}$ 4 SYM with bare dimension $\Delta_0 \leq 6$, in a wide range of the 't Hooft coupling. This data is readily available for anyone to use in their research. The spectral data for a state with 
+This sub-directory contains precomputed scaling dimensions for all 219 states in ${\cal N =}$ 4 SYM with bare dimension $\Delta_0 \leq 6$, in a wide range of the 't Hooft coupling. This data is readily available for anyone to use in their research. States are uniquely defined by their
 
 $\texttt{State ID}:    {}\_{\Delta\_0}[n\_{{\bf b}\_1}\\;n\_{{\bf b}\_2}\\;n\_{{\bf f}\_1}\\;n\_{{\bf f}\_2}\\;n\_{{\bf f}\_3}\\;n\_{{\bf f}\_4}\\;n\_{{\bf a}\_1}\\;n\_{{\bf a}\_2}]\_{\tt sol}$ 
 
-is stored in the *.mx* file called
+For example, the $\texttt{State ID}$ of the Konishi operator is ${}\_{2}[2\\;0\\;0\\;1\\;1\\;1\\;1\\;0\\;0]\_{1}$. 
 
-*numerical\_data\_Delta0*$\\,\Delta_0\\,$*\_b1*$\\,n\_{{\bf b}\_1\\,}$*\_b2*$\\,n\_{{\bf b}\_2}\\,$*\_f1*$\\,n\_{{\bf f}\_1}\\,$*\_f2*$\\,n\_{{\bf f}\_2}\\,$*\_f3*$\\,n\_{{\bf f}\_3}\\,$*\_f4*$\\,n\_{{\bf f}\_4\\,}$*\_a1*$\\,n\_{{\bf a}\_1}\\,$*\_a2*$\\,n\_{{\bf a}\_2}\\,$*\_sol*$\\,{\tt sol}\\,$*.mx*.
+Its numerical data is stored in the *.mx* file called
+
+*numerical\_data\_Delta02_b10_b20_f11_f21_f31_f41_a10_a20_sol1.mx*.
+
+Similarly, one can find the nuemrical data for other states given their $\texttt{State ID}$.
 
 The file contains a $2\times 2$ array `dataGH`. Each element of of this array is a tuple $(g,\Delta)$ where $g$ is the value of the 't Hooft coupling, and $\Delta$ is the value of the dimension of the state at that value of $g$. The precision of $\Delta$ is **... (J: to be added)**
 
@@ -57,13 +61,6 @@ is an *.mx* file called
 
 *numerical\_data\_Delta0*$\\,\Delta_0\\,$*\_b1*$\\,n\_{{\bf b}\_1\\,}$*\_b2*$\\,n\_{{\bf b}\_2}\\,$*\_f1*$\\,n\_{{\bf f}\_1}\\,$*\_f2*$\\,n\_{{\bf f}\_2}\\,$*\_f3*$\\,n\_{{\bf f}\_3}\\,$*\_f4*$\\,n\_{{\bf f}\_4\\,}$*\_a1*$\\,n\_{{\bf a}\_1}\\,$*\_a2*$\\,n\_{{\bf a}\_2}\\,$*\_sol*$\\,{\tt sol}\\,$*.mx*.
 
-### */seed*
-
-This directory contains a Mathematica notebook **(J: to be added)**
-
-### */demo*
-
-This directory contains a Mathematica notebook **(J: to be added)**
 
 ## Installation and Compilation
 
