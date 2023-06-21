@@ -35,7 +35,7 @@ Its numerical data is stored in the *.mx* file called
 
 Similarly, one can find the nuemrical data for other states given their $\texttt{State ID}$.
 
-The file contains a $2\times 2$ array `dataGH`. Each element of of this array is a tuple $(g,\Delta)$ where $g$ is the value of the 't Hooft coupling, and $\Delta$ is the value of the dimension of the state at that value of $g$. We have at least 15 digits of precision for each data point. **(J: please approve statement)**
+The file contains a $2\times 2$ array `dataGH`. Each element of of this array is a tuple $(g,\Delta)$ where $g$ is the value of the 't Hooft coupling, and $\Delta$ is the value of the dimension of the state at that value of $g$. We have at least 12 digits of precision for each data point, with more than 20 digits for many points. **(J: please approve statement)**
 
 Depending on the type of the state/operator, we are able to provide data for different ranges in $g$.
 
