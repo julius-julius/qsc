@@ -8,6 +8,8 @@ SetOptions[$Output, FormatType->OutputForm];
 ToString1=ToString[#,PageWidth->Infinity]&;
 
 
+(*comment if running in manual mode*)
+
 (*Path to TypeIV_exec.out*)
 ExecPath = "../core/";
 
