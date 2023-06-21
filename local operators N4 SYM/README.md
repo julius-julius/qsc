@@ -3,19 +3,19 @@ A numerical non-perturbative quantum spectral curve solver and database of non-p
 
 ## Structure of Repository
 
-This repository has 4 directories: */core*, */auxiliary*, */run*, */data*. 
+This repository has 5 directories: */core*, */auxiliary*, */run*, */data* and */prototype*. 
 
 ### */core*
 
-This directory contains the C++ code, for the various types of local opearators in planar ${\cal N =}$ 4 SYM.
+This directory contains the ${\tt C++}$ code, for the various types of local opearators in planar ${\cal N =}$ 4 SYM.
 
 ### */auxiliary*
 
-This directory contains Mathematica and Python packages/modules/scripts which assist in automation and parameter management.
+This directory contains ${\tt Mathematica}$ and ${\tt Python}$ packages/modules/scripts which assist in automation and parameter management.
 
 ### */run*
 
-This directory contains *.ipnb* files, which is the main interface through which one is able to run the numerics.
+This directory contains ${\tt Jupyter}$ notebooks, which is the main interface through which one is able to run the numerics.
 
 ### */data*
 
@@ -35,36 +35,37 @@ Its numerical data is stored in the *.mx* file called
 
 Similarly, one can find the nuemrical data for other states given their $\texttt{State ID}$.
 
-The file contains a $2\times 2$ array `dataGH`. Each element of of this array is a tuple $(g,\Delta)$ where $g$ is the value of the 't Hooft coupling, and $\Delta$ is the value of the dimension of the state at that value of $g$. The precision of $\Delta$ is **... (J: to be added)**
+The file contains a $2\times 2$ array `dataGH`. Each element of of this array is a tuple $(g,\Delta)$ where $g$ is the value of the 't Hooft coupling, and $\Delta$ is the value of the dimension of the state at that value of $g$. We have at least 15 digits of precision for each data point. **(J: please approve statement)**
 
 Depending on the type of the state/operator, we are able to provide data for different ranges in $g$.
 
 ***/perturbative***
 
-This sub-directory contains precomputed perturbative data to initialise the numerical algorithm for all 219 states in ${\cal N =}$ 4 SYM with bare dimension $\Delta_0 \leq 6$. The perturvative data for a state with 
+This sub-directory contains precomputed perturbative data to initialise the numerical algorithm for all 219 states in ${\cal N =}$ 4 SYM with bare dimension $\Delta_0 \leq 6$. The perturbative data is obtained from the [Perturbative QSC Solver](https://arxiv.org/abs/1812.09238) of Marboe and Volin.
 
-$\texttt{State ID}:    {}\_{\Delta\_0}[n\_{{\bf b}\_1}\\;n\_{{\bf b}\_2}\\;n\_{{\bf f}\_1}\\;n\_{{\bf f}\_2}\\;n\_{{\bf f}\_3}\\;n\_{{\bf f}\_4}\\;n\_{{\bf a}\_1}\\;n\_{{\bf a}\_2}]\_{\tt sol}$ 
+Again, as an exmaple, the perturvative data of the Konishi operator is stored in the *.mx* file called
 
-is stored in the *.mx* file called
-
-*perturbative\_data\_Delta0*$\\,\Delta_0\\,$*\_b1*$\\,n\_{{\bf b}\_1\\,}$*\_b2*$\\,n\_{{\bf b}\_2}\\,$*\_f1*$\\,n\_{{\bf f}\_1}\\,$*\_f2*$\\,n\_{{\bf f}\_2}\\,$*\_f3*$\\,n\_{{\bf f}\_3}\\,$*\_f4*$\\,n\_{{\bf f}\_4\\,}$*\_a1*$\\,n\_{{\bf a}\_1}\\,$*\_a2*$\\,n\_{{\bf a}\_2}\\,$*\_sol*$\\,{\tt sol}\\,$*.mx*.
+*perturbative\_data\_Delta02_b10_b20_f11_f21_f31_f41_a10_a20_sol1.mx*.
 
 The file contains the substitution rule `sbWeak` which substitutes the perturbative expansion of $\Delta$ as well as the expansion coefficeints $c_{a,n}$ of ${\bf P}\_a$ and $c^{a,n}$ of ${\bf P}^a$.
 
 ***/output***
 
-This is the default directory where outputs of the numerical runs get stored. The default output format of a state with 
+This is the default directory where outputs of the numerical runs get stored. The default output format applied to the Konishi operator, for example is an *.mx* file called
 
-$\texttt{State ID}:    {}\_{\Delta\_0}[n\_{{\bf b}\_1}\\;n\_{{\bf b}\_2}\\;n\_{{\bf f}\_1}\\;n\_{{\bf f}\_2}\\;n\_{{\bf f}\_3}\\;n\_{{\bf f}\_4}\\;n\_{{\bf a}\_1}\\;n\_{{\bf a}\_2}]\_{\tt sol}$ 
+*numerical\_data\_Delta02_b10_b20_f11_f21_f31_f41_a10_a20_sol1.mx*.
 
-is an *.mx* file called
+### */prototype*
 
-*numerical\_data\_Delta0*$\\,\Delta_0\\,$*\_b1*$\\,n\_{{\bf b}\_1\\,}$*\_b2*$\\,n\_{{\bf b}\_2}\\,$*\_f1*$\\,n\_{{\bf f}\_1}\\,$*\_f2*$\\,n\_{{\bf f}\_2}\\,$*\_f3*$\\,n\_{{\bf f}\_3}\\,$*\_f4*$\\,n\_{{\bf f}\_4\\,}$*\_a1*$\\,n\_{{\bf a}\_1}\\,$*\_a2*$\\,n\_{{\bf a}\_2}\\,$*\_sol*$\\,{\tt sol}\\,$*.mx*.
+This directory contains a ${\tt Mathematica}$ notebook *toadd.nb* which is a prototype of our numerical procedure for Type I states. **(J: Add notebook and describe how to use it)**
 
+## How to use the Fast QSC Solver
+
+In order to use the Fast QSC Solver, you will need to download all the directories contained here, to your local system. Then follow the steps given below to compile and run your states.
 
 ## Installation and Compilation
 
-The first step is to install the requisite C++ compilers and packages and compile the C++ code in the */core* directory.
+The first step is to install the requisite ${\tt C++}$ compilers and packages and compile the ${\tt C++}$ code in the */core* directory.
 
 ### Compilers and Packages
 
@@ -82,7 +83,7 @@ Below we present the steps to install the above on a Debian linux system. The fo
 
 **Mac**
 
-Below we present the steps to install the above on a Mac system. First, you need to install a package manager such as Homebrew (https://brew.sh/). In the sequel we assume that Homebrew is installed. In the terminal, run
+Below we present the steps to install the above on a Mac system. First, you need to install a package manager such as [Homebrew](https://brew.sh/). In the sequel we assume that Homebrew is installed. In the terminal, run
 
 `> brew install g++`
 
@@ -90,7 +91,7 @@ Below we present the steps to install the above on a Mac system. First, you need
 
 **Windows**
 
-In order to use the packages on a Windows operating system, one needs to install a Windows Subsystem for Linux (WSL) (https://learn.microsoft.com/en-us/windows/wsl/install). Then all linux programs can be executed from the Windows PowerShell. The only difference
+In order to use the packages on a Windows operating system, one needs to install a [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install). Then all linux programs can be executed from the Windows PowerShell. The only difference
 with respect to usual linux is that each command should be anticipated by typing `wsl`. Run the following commands on the Windows PowerShell
 
 `> wsl sudo apt install g++`
@@ -109,41 +110,41 @@ In the */core* directory, there are four *.cpp* files. Each code pertains to a p
 - For type III states, use *TypeIII_core.cpp*
 - For type IV states, use *TypeIV_core.cpp*
 
-To compile any of the above, on Linux and Mac, use the following command where *source.cpp* is the C++ file, and *executable.out* is the executable output file
+To compile any of the above, on Linux and Mac, use the following command where *source.cpp* is the ${\tt C++}$ file, and *executable.out* is the executable output file
 
 `> g++ source.cpp -lm -lcln -o executable.out`
 
-You will need to anticipate with `wsl` for Windows. In order for the executables to be compatible with the Mathematica notebooks in the */core* directory, the names of the execulatbles in the four cases should be as follows.
+You will need to anticipate with `wsl` for Windows. In order for the executables to be compatible with the ${\tt Mathematica}$ notebooks in the */core* directory, the names of the execulatbles in the four cases should be as follows.
 
 - For type I states, use *TypeI_exec.out*
 - For type II states, use *TypeII_exec.out*
 - For type III states, use *TypeIII_exec.out*
 - For type IV states, use *TypeIV_exec.out*
 
-Once compiled (it should compile without errors, warnings are OK), ensure that the exeutable file and the Mathematica notebook are in the same directory. The C++ sourcecode needs to be compiled only once. 
+Once compiled (it should compile without errors, warnings are OK), ensure that the exeutable file and the ${\tt Mathematica}$ notebook are in the same directory. The ${\tt C++}$ sourcecode needs to be compiled only once. 
 
 ## Execution and Automation
 
-In order to ensure that everything goes smoothly, and the code was compiled properly, we recommend to test the executables by running the corresponding Mathematica notebooks in */core*. We assume that the user has downloaded Mathematica (https://www.wolfram.com/mathematica/).
+In order to ensure that everything goes smoothly, and the code was compiled properly, we recommend to test the executables by running the corresponding ${\tt Mathematica}$ notebooks in */core*. We assume that the user has downloaded [Mathematica](https://www.wolfram.com/Mathematica/).
 
-### Execute from Mathematica notebook
+### Execute from ${\tt Mathematica}$ notebook
 
-Ensure that the executable file is in the same directry as the Mathematica notebooks available in */core*. Depending on your application, you should use
+Ensure that the executable file is in the same directry as the ${\tt Mathematica}$ notebooks available in */core*. Depending on your application, you should use
 
 - *TypeI_example.nb* for type I states
 - *TypeII_example.nb* for type II states
 - *TypeIII_example.nb* for type III states
 - *TypeIV_example.nb* for type IV states
 
-Run the corresponding Mathematica notebook. If it runs without errors, then this step is successful. The specifics of the inputs and outputs of the run may be read from the comments in the Mathematica notebook.
+Run the corresponding ${\tt Mathematica}$ notebook. If it runs without errors, then this step is successful. The specifics of the inputs and outputs of the run may be read from the comments in the ${\tt Mathematica}$ notebook.
 
-### Automation using Python
+### Automation using ${\tt Python}$
 
-In order to run the *.ipynb* files, you will need to install Jupyter notebook (https://jupyter.org/). You can download it from the website or from distributions such as Anaconda (https://www.anaconda.com/). In order to open a Jupyter notebook, on Linux and Mac, you should type the following in the terminal
+In order to run the *.ipynb* files, you will need to install [Jupyter notebook](https://jupyter.org/). You can download it from the website or from distributions such as [Anaconda](https://www.anaconda.com/). In order to open a ${\tt Jupyter}$ notebook, on Linux and Mac, you should type the following in the terminal
 
 `jupyter notebook`
 
-For Windows, you will need to locate the Jupyter notebook icon using the graphical user interface, and click on it. This command should open a file navigator on your browser, and you will need to navidate to the location of the */run* directory.
+For Windows, you will need to locate the ${\tt Jupyter}$ notebook icon using the graphical user interface, and click on it. This command should open a file navigator on your browser, and you will need to navidate to the location of the */run* directory.
 
 The directory */run* contains four *.ipynb* files, which run and automatically manage the hyperparameters of a particular state:
 
@@ -163,7 +164,7 @@ Before running the *.ipynb* ensure that all the paths are correctly adjusted bas
 - In */auxiliary/TypeI_script.wls* you need to specify the path to *TypeI_exec.out*, *TypeI_package.wl* and the location of your output data. By default *TypeI_exec.out* is located in */core*, *TypeI_package.wl* is located in */auxiliary*, and the output location is */data/output* (same for *.ipynb* files of other types of states).
 - In */auxiliary/TypeI_package.wl* you need to specify the location of the perturbative data. By default the perturbative data is located in */data/perturbative* (same for *.ipynb* files of other types of states).
 
-To initialise a state with a given $\texttt{State ID}$ you must ensure that there is a *.mx* file with perturbative data that you will need to initialise the numerics. For the 219 states with bare dimenion $\Delta_0\leq 6$, this is already precomputed, and such a file is available in */data/perturbative*. For states with $\Delta_0>6$, you can generate this data by running **(J: to be added)**. By default, the perturbative data generated will be stored in */data/perturbative*.
+To initialise a state with a given $\texttt{State ID}$ you must ensure that there is a *.mx* file with perturbative data that you will need to initialise the numerics. For the 219 states with bare dimenion $\Delta_0\leq 6$, this is already precomputed, and such a file is available in */data/perturbative*. For states with $\Delta_0>6$, we will release a ${\tt Mathematica}$ notebook, which converts the perturbative data of [Perturbative QSC Solver](https://arxiv.org/abs/1812.09238) of Marboe and Volin into a format compatible with our ${\tt C++}$ implementation.
 
 **Running**
 
