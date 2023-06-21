@@ -6,3 +6,7 @@ If you use the code for your project please consider citing the paper of [Gromov
 ## Structute of Repository
 
 This repository has one sub-repository */Local Operators N4 SYM*, which containts the Fast QSC Solver for the spectral problem of local oprators in planar ${\cal N} = 4$ supersymmetric Yang-Mills theory (SYM).
+
+## Note
+
+To flag any issues for debugging, please write to [Julius Julius](mailto:juliusjulius.1729@gmail.com).
