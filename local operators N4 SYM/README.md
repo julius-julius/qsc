@@ -1,9 +1,9 @@
 # Fast QSC Solver for local operators in ${\cal N} = 4$ supersymmetric Yang-Mills theory
 An efficient numerical non-perturbative QSC solver and database of non-perturbative values of the scaling dimensions of states/operators of planar ${\cal N} = 4$ supersymmetric Yang-Mills theory (SYM), in a wide range of the 't Hooft coupling $g\equiv \sqrt{\lambda}/4\pi \equiv g\_{\tt YM}^2 N /4\pi$, where $g_{\tt YM}$ is the Yang-Mills coupling and $N-1$ is the rank of the gauge group ${\rm SU}(N)$.
 
-## Structure of Repository
+## Structure of Sub-repository
 
-This repository has 5 directories: */core*, */auxiliary*, */run*, */data* and */prototype*. 
+This sub-repository has 5 directories: */core*, */auxiliary*, */run*, */data* and */prototype*. 
 
 ### */core*
 
