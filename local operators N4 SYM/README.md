@@ -69,7 +69,7 @@ Once generated, such a file will contain the following:
 
 ### */prototype*
 
-This directory contains a ${\tt Mathematica}$ notebook *Konishi_prototype.nb* which is a {\tt Mathematica} prototype of our numerical procedure for the highest weight state of the Konishi multiplet.
+This directory contains a ${\tt Mathematica}$ notebook *Konishi_prototype.nb* which is a ${\tt Mathematica}$ prototype of our numerical procedure for the highest weight state of the Konishi multiplet.
 
 ## How to use the Fast QSC Solver
 
@@ -126,7 +126,7 @@ To compile any of the above, on Linux and Mac, use the following command where *
 
 `> g++ source.cpp -lm -lcln -o executable.out`
 
-where *executable.out* should have the name
+Here *executable.out* should have the name
 
 - For type I states, use *TypeI_exec.out*
 - For type II states, use *TypeII_exec.out*
