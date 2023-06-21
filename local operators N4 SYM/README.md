@@ -23,21 +23,21 @@ This directory contains 3 sub-directories: */numerical*, */perturbative* and */o
 
 ***/numerical***
 
-This sub-directory contains precomputed scaling dimensions for all 219 states in ${\cal N =}$ 4 SYM with bare dimension $\Delta_0 \leq 6$, in a wide range of the 't Hooft coupling. This data is readily available for anyone to use in their research. States are uniquely defined by their
+This sub-directory contains precomputed scaling dimensions for all 219 states/operator in ${\cal N =}$ 4 SYM with bare dimension $\Delta_0 \leq 6$, in a wide range of the 't Hooft coupling. This data is readily available for anyone to use in their research. States are uniquely defined by their
 
 $\texttt{State ID}:    {}\_{\Delta\_0}[n\_{{\bf b}\_1}\\;n\_{{\bf b}\_2}\\;n\_{{\bf f}\_1}\\;n\_{{\bf f}\_2}\\;n\_{{\bf f}\_3}\\;n\_{{\bf f}\_4}\\;n\_{{\bf a}\_1}\\;n\_{{\bf a}\_2}]\_{\tt sol}$ 
 
-For example, the $\texttt{State ID}$ of the Konishi operator is ${}\_{2}[0\\;0\\;1\\;1\\;1\\;1\\;0\\;0]\_{1}$. 
+For example, the $\texttt{State ID}$ of the highest weight state of the Konishi multiplet is ${}\_{2}[0\\;0\\;1\\;1\\;1\\;1\\;0\\;0]\_{1}$. 
 
 Its numerical data is stored in the *.mx* file called
 
-*numerical\_data\_Delta02_b10_b20_f11_f21_f31_f41_a10_a20_sol1.mx*.
+*numerical\_spectral\_data\_Delta02_b10_b20_f11_f21_f31_f41_a10_a20_sol1.mx*.
 
 Similarly, one can find the numerical data for other states given their $\texttt{State ID}$.
 
-The file contains a $2\times 2$ array `dataGH`. Each element of this array is a tuple $(g,\Delta)$ where $g$ is the value of the 't Hooft coupling, and $\Delta$ is the value of the dimension of the state at that value of $g$. We have at least 12 digits of precision for each data point, with more than 20 digits for many points. **(J: please approve statement)**
+The *.mx* file should be imported onto a ${\tt Mathematica}$ notebook. It contains a function called `SpectralData`. This function is evaluated at the ${\tt State ID}$. For Konishi, we would therefore have to evaluate `SpectralData[{2,0,0,1,1,1,1,0,0,1}]`. It outputs a $2\times 2$ array. Each element of this array is a tuple $\\{g,\Delta\\}$ where $g$ is the value of the 't Hooft coupling, and $\Delta$ is the value of the dimension of the state at that value of $g$. We have at least 12 digits of precision for each data point, with more than 20 digits for many points. 
 
-Depending on the type of the state/operator, we are able to provide data for different ranges in $g$.
+Depending on the type of the state, we are able to provide data for different ranges in $g$.
 
 ***/perturbative***
 
@@ -51,9 +51,21 @@ The file contains the substitution rule `sbWeak` which substitutes the perturbat
 
 ***/output***
 
-This is the default directory where outputs of the numerical runs get stored. The default output format applied to the Konishi operator, for example is an *.mx* file called
+This is the default directory where outputs of the numerical runs get stored. The default output format applied to the Konishi operator for example, is a *.mx* file called
 
 *numerical\_data\_Delta02_b10_b20_f11_f21_f31_f41_a10_a20_sol1.mx*.
+
+Once generated, such a file will contain the following:
+
+- A vector `saved` with **rational** values of the 't Hooft coupling $g$, of the points at which numerical data is saved. Everything else stored in the *.mx* file is a function which takes one rational input, the 't Hooft coupling, which should be an element of `saved`. The various functions' outputs are given below
+- A function `params` outputs a vector of the form:
+    - For type I and II states: $\\{\\;g,\\;\Delta,\\;c\_{1,1},\\;\dots,\\;c\_{1,{\tt cutP}},\\;,\\;c\_{2,1},\\;\dots,\\;c\_{2,{\tt cutP}},\\;c\_{3,1},\\;\dots,\\;c\_{3,{\tt cutP}},\\;c\_{4,1},\\;\dots,\\;c\_{4,{\tt cutP}}\\;\\}$
+    - For type III and IV states: $\\{\\;g,\\;\Delta,\\;c\_{1,1},\\;\dots,\\;c\_{1,{\tt cutP}},\\;\dots\\;,\\;c\_{4,1},\\;\dots,\\;c\_{4,{\tt cutP}},\\;c^{1,1},\\;\dots,\\;c^{1,{\tt cutP}},\\;\dots\\;,\\;c^{4,1},\\;\dots,\\;c^{4,{\tt cutP}}\\;\\}$
+- A function `values`
+- A function `error`
+- A function `digits`
+- A funtion `init`
+- A function `command`
 
 ### */prototype*
 
