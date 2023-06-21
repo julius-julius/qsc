@@ -153,7 +153,7 @@ Run the corresponding ${\tt Mathematica}$ notebook. If it runs without errors, t
 
 ### Automation using ${\tt Python}$
 
-In order to run the *.ipynb* files, you will need to install [Jupyter notebook](https://jupyter.org/). You can download it from the website or from distributions such as [Anaconda](https://www.anaconda.com/). Remember to navigate back to your home directory using for instance, the `cd` command! In order to open a ${\tt Jupyter}$ notebook, on Linux and Mac, you should type the following in the terminal
+Remember to navigate back to your home directory using for instance, the `cd` command! In order to run the *.ipynb* files, you will need to install [Jupyter notebook](https://jupyter.org/). You can download it from the website or from distributions such as [Anaconda](https://www.anaconda.com/). In order to open a ${\tt Jupyter}$ notebook, on Linux and Mac, you should type the following in the terminal
 
 `jupyter notebook`
 
@@ -171,14 +171,14 @@ Select the *.ipynb* file according to the type of state which you wish to run.
 **Pre-requisites**
 
 Before running the *.ipynb* ensure that all the paths are correctly adjusted based on your specific project organisation. The default path settings will work for a project that has the same strucutre as this repository, and should work without change if you pull this repository to your local system. 
-In case your project organisation has a different structure, we list here are various places where the path needs to be adjusted. In case you have the same project organisation as this repository, then there is no need to adjust anything.
+In case your project organisation has a different structure, we list here are various places where the path needs to be adjusted below
 
 - In */run/TypeI_run.ipynb*, you need to specify the path to *TypeI_module.ipynb*. By default *TypeI_module.ipynb* is located in */auxiliary* (same for *.ipynb* files of other types of states).
 - In */auxiliary/TypeI_module.ipynb*, you need to specify the path to *TypeI_run.wls*. By default *TypeI_script.wls* is located in */auxiliary* (same for *.ipynb* files of other types of states).
 - In */auxiliary/TypeI_script.wls* you need to specify the path to *TypeI_exec.out*, *TypeI_package.wl* and the location of your output data. By default *TypeI_exec.out* is located in */core*, *TypeI_package.wl* is located in */auxiliary*, and the output location is */data/output* (same for *.ipynb* files of other types of states).
 - In */auxiliary/TypeI_package.wl* you need to specify the location of the perturbative data. By default the perturbative data is located in */data/perturbative* (same for *.ipynb* files of other types of states).
 
-To initialise a state with a given $\texttt{State ID}$ you must ensure that there is a *.mx* file with perturbative data that you will need to initialise the numerics. For the 219 states with bare dimenion $\Delta_0\leq 6$, this is already precomputed, and such a file is available in */data/perturbative*. For states with $\Delta_0>6$, we will release a ${\tt Mathematica}$ notebook, which converts the perturbative data of [Perturbative QSC Solver](https://arxiv.org/abs/1812.09238) of Marboe and Volin into a format compatible with our ${\tt C++}$ implementation.
+To initialise a state with a given $\texttt{State ID}$ you must ensure that there is a *.mx* file with perturbative data that you will need to initialise the numerics. For the 219 states with bare dimenion $\Delta_0\leq 6$, this is already precomputed, and such a file is available in */data/perturbative*. For states with $\Delta_0>6$, we will release in the near future, a ${\tt Mathematica}$ notebook, which converts the perturbative data of [Perturbative QSC Solver](https://arxiv.org/abs/1812.09238) of Marboe and Volin into a format compatible with our ${\tt C++}$ implementation.
 
 **Running**
 
