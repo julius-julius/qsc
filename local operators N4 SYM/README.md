@@ -62,9 +62,9 @@ Once generated, such a file will contain the following:
     - For type I and II states: $\\{\\;g,\\;\Delta,\\;c\_{1,1},\\;\dots,\\;c\_{1,{\tt cutP}},\\;,\\;c\_{2,1},\\;\dots,\\;c\_{2,{\tt cutP}},\\;c\_{3,1},\\;\dots,\\;c\_{3,{\tt cutP}},\\;c\_{4,1},\\;\dots,\\;c\_{4,{\tt cutP}}\\;\\}$
     - For type III and IV states: $\\{\\;g,\\;\Delta,\\;c\_{1,1},\\;\dots,\\;c\_{1,{\tt cutP}},\\;\dots\\;,\\;c\_{4,1},\\;\dots,\\;c\_{4,{\tt cutP}},\\;c^{1,1},\\;\dots,\\;c^{1,{\tt cutP}},\\;\dots\\;,\\;c^{4,1},\\;\dots,\\;c^{4,{\tt cutP}}\\;\\}$
 - A function `values` outputs the hyperparameters: $\\{ \\{ {\tt cutP},\\;{\tt nPoints}  \\} ,\\; \\{ {\tt cutQai},\\;{\tt QaiShift}  \\} ,\\; \\{ \log\_{10}\epsilon,\\;{\tt WP}  \\} \\}$.
-- A function `error`outputs the 
-- A function `digits` outputs difference between the initial and final values of $\Delta$
-- A funtion `init` outputs the initial numerical values of $\Delta$, $c_{a,n}$ and $c^{a,n}$. It has the same form as `params`
+- A function `error`outputs a number $\mathbb{S}{\tt best}$, which is a measure of the precision of the numerical data.
+- A function `digits` outputs difference between the initial and final values of $\Delta$.
+- A funtion `init` outputs the initial numerical values of $\Delta$, $c_{a,n}$ and $c^{a,n}$. It has the same form as `params`.
 - A function `command` outputs the input line that is parsed from the ${\tt Jupyter}$ notebook used to run the numerics, to the *.wsl* file used to lauch the ${\tt C++}$ engine.
 
 ### */prototype*
