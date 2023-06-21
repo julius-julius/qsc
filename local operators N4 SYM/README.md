@@ -57,7 +57,7 @@ This is the default directory where outputs of the numerical runs get stored. Th
 
 ### */prototype*
 
-This directory contains a ${\tt Mathematica}$ notebook *toadd.nb* which is a prototype of our numerical procedure for Type I states. **(J: Add notebook and describe how to use it)**
+This directory contains a ${\tt Mathematica}$ notebook *toadd.nb* which is a prototype of our numerical procedure the Konishi state. **(J: Add notebook and describe how to use it)**
 
 ## How to use the Fast QSC Solver
 
