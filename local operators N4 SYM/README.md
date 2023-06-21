@@ -61,7 +61,7 @@ This directory contains a ${\tt Mathematica}$ notebook *toadd.nb* which is a pro
 
 ## How to use the Fast QSC Solver
 
-In order to use the Fast QSC Solver, you will need to download all the directories contained here, to your local system. Then follow the steps given below to compile and run your states.
+In order to use the Fast QSC Solver, you will need to download all the directories contained here, to your local system. If you are downloading the contents of this repository using GitHub Desktop, then please either create your own branch, or copy elsewhere after downloading, before you run. Then follow the steps given below to compile and run your states. 
 
 ## Installation and Compilation
 
