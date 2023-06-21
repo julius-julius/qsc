@@ -33,7 +33,7 @@ Its numerical data is stored in the *.mx* file called
 
 *numerical\_data\_Delta02_b10_b20_f11_f21_f31_f41_a10_a20_sol1.mx*.
 
-Similarly, one can find the nuemrical data for other states given their $\texttt{State ID}$.
+Similarly, one can find the numerical data for other states given their $\texttt{State ID}$.
 
 The file contains a $2\times 2$ array `dataGH`. Each element of this array is a tuple $(g,\Delta)$ where $g$ is the value of the 't Hooft coupling, and $\Delta$ is the value of the dimension of the state at that value of $g$. We have at least 12 digits of precision for each data point, with more than 20 digits for many points. **(J: please approve statement)**
 
@@ -43,7 +43,7 @@ Depending on the type of the state/operator, we are able to provide data for dif
 
 This sub-directory contains precomputed perturbative data to initialise the numerical algorithm for all 219 states in ${\cal N =}$ 4 SYM with bare dimension $\Delta_0 \leq 6$. The perturbative data is obtained from the [Perturbative QSC Solver](https://arxiv.org/abs/1812.09238) of Marboe and Volin.
 
-Again, as an exmaple, the perturvative data of the Konishi operator is stored in the *.mx* file called
+Again, as an example, the perturbative data of the Konishi operator is stored in the *.mx* file called
 
 *perturbative\_data\_Delta02_b10_b20_f11_f21_f31_f41_a10_a20_sol1.mx*.
 
@@ -105,23 +105,23 @@ with respect to usual linux is that each command should be anticipated by typing
 
 In the */core* directory, there are four *.cpp* files. Each code pertains to a particular type of state in planar ${\cal N} = 4$ SYM:
 
-- For type I states, use *TypeI_core.cpp*
-- For type II states, use *TypeII_core.cpp*
-- For type III states, use *TypeIII_core.cpp*
-- For type IV states, use *TypeIV_core.cpp*
+- For type I states (Left-right and parity symmetric) , use *TypeI_core.cpp*
+- For type II states (Left-right symmetric and general parity), use *TypeII_core.cpp*
+- For type III states (general and parity symmetric), use *TypeIII_core.cpp*
+- For type IV states (general), use *TypeIV_core.cpp*
 
 To compile any of the above, on Linux and Mac, use the following command where *source.cpp* is the ${\tt C++}$ file, and *executable.out* is the executable output file
 
 `> g++ source.cpp -lm -lcln -o executable.out`
 
-You will need to anticipate with `wsl` for Windows. In order for the executables to be compatible with the ${\tt Mathematica}$ notebooks in the */core* directory, the names of the execulatbles in the four cases should be as follows.
+where *executable.out* should have the name
 
 - For type I states, use *TypeI_exec.out*
 - For type II states, use *TypeII_exec.out*
 - For type III states, use *TypeIII_exec.out*
 - For type IV states, use *TypeIV_exec.out*
 
-Once compiled (it should compile without errors, warnings are OK), ensure that the exeutable file and the ${\tt Mathematica}$ notebook are in the same directory. The ${\tt C++}$ sourcecode needs to be compiled only once. 
+You will need to anticipate the Linux/Mac command with `wsl` for Windows. Once compiled (it should compile without errors, warnings are OK), ensure that the exeutable file and the ${\tt Mathematica}$ notebook are in the same directory. The ${\tt C++}$ sourcecode needs to be compiled only once. 
 
 ## Execution and Automation
 
@@ -140,7 +140,7 @@ Run the corresponding ${\tt Mathematica}$ notebook. If it runs without errors, t
 
 ### Automation using ${\tt Python}$
 
-In order to run the *.ipynb* files, you will need to install [Jupyter notebook](https://jupyter.org/). You can download it from the website or from distributions such as [Anaconda](https://www.anaconda.com/). In order to open a ${\tt Jupyter}$ notebook, on Linux and Mac, you should type the following in the terminal
+In order to run the *.ipynb* files, you will need to install [Jupyter notebook](https://jupyter.org/). You can download it from the website or from distributions such as [Anaconda](https://www.anaconda.com/). Ensure that you `cd` back to your home directory. In order to open a ${\tt Jupyter}$ notebook, on Linux and Mac, you should type the following in the terminal
 
 `jupyter notebook`
 
@@ -157,7 +157,8 @@ Select the *.ipynb* file according to the type of state which you wish to run.
 
 **Pre-requisites**
 
-Before running the *.ipynb* ensure that all the paths are correctly adjusted based on your specific project organisation. The default path settings will work for a project that has the same strucutre as this repository, and should work without change if you pull this repository to your local system. There are various places where the path needs to be adjusted. We list them below:
+Before running the *.ipynb* ensure that all the paths are correctly adjusted based on your specific project organisation. The default path settings will work for a project that has the same strucutre as this repository, and should work without change if you pull this repository to your local system. 
+In case your project organisation has a different structure, we list here are various places where the path needs to be adjusted. In case you have the same project organisation as this repository, then there is no need to adjust anything.
 
 - In */run/TypeI_run.ipynb*, you need to specify the path to *TypeI_module.ipynb*. By default *TypeI_module.ipynb* is located in */auxiliary* (same for *.ipynb* files of other types of states).
 - In */auxiliary/TypeI_module.ipynb*, you need to specify the path to *TypeI_run.wls*. By default *TypeI_script.wls* is located in */auxiliary* (same for *.ipynb* files of other types of states).
