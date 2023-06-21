@@ -8,6 +8,8 @@ SetOptions[$Output, FormatType->OutputForm];
 ToString1=ToString[#,PageWidth->Infinity]&;
 
 
+(*comment if running in manual mode*)
+
 (*Path to TypeII_exec.out*)
 ExecPath = "../core/";
 
@@ -139,7 +141,7 @@ precssf=2*(errorTol-4); (* iteration qiuting condition parameter,*)
 maxiter=extrations;  (* iteration qiuting condition parameter, if the number of iterations is larger than maxiter, than the programm finishes running, and return the value, it obtained upto maxiter iterations*)
 
 
-(*generate the string to attach to the executable file TypeI_exec.out*)
+(*generate the string to attach to the executable file TypeII_exec.out*)
 
 ingen=Table["",{k,1,24+4*cutP}];
 For[k=0,k<=cutP,k++,     

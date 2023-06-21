@@ -8,6 +8,8 @@ SetOptions[$Output, FormatType->OutputForm];
 ToString1=ToString[#,PageWidth->Infinity]&;
 
 
+(*comment if running in manual mode*)
+
 (*Path to TypeI_exec.out*)
 ExecPath = "../core/";
 
@@ -75,13 +77,13 @@ na[2]=0;
 sol = 1;
 
 cutP = 16;
-nPoints = cutP + 4;
+nPoints = cutP + 2;
 cutQai = 30;
 QaiShift = 50;
 \[Epsilon] = 10^(-30);
 WP = 186;
 
-gloop = 6/100;
+gloop = 1/1000;
 
 interOrder = 10;
 interMethod = 1;
