@@ -57,19 +57,19 @@ This is the default directory where outputs of the numerical runs get stored. Th
 
 Once generated, such a file will contain the following:
 
-- A vector `saved` with **rational** values of the 't Hooft coupling $g$, of the points at which numerical data is saved. Everything else stored in the *.mx* file is a function which takes one rational input, the 't Hooft coupling, which should be an element of `saved`. The various functions' outputs are given below
-- A function `params` outputs a vector of the form:
+- A vector `saved` with **rational** values of the 't Hooft coupling $g$, of the points at which numerical data is saved. Everything else stored in the *.mx* file is a function which takes one rational input, the 't Hooft coupling, which should be an element of `saved`. The various functions' outputs are given below.
+- A function `params` gives the final numerical values of $\Delta$, and the the expansion coefficeints $c_{a,n}$ of ${\bf P}\_a$ and $c^{a,n}$ of ${\bf P}^a$. It outputs a vector of the form:
     - For type I and II states: $\\{\\;g,\\;\Delta,\\;c\_{1,1},\\;\dots,\\;c\_{1,{\tt cutP}},\\;,\\;c\_{2,1},\\;\dots,\\;c\_{2,{\tt cutP}},\\;c\_{3,1},\\;\dots,\\;c\_{3,{\tt cutP}},\\;c\_{4,1},\\;\dots,\\;c\_{4,{\tt cutP}}\\;\\}$
     - For type III and IV states: $\\{\\;g,\\;\Delta,\\;c\_{1,1},\\;\dots,\\;c\_{1,{\tt cutP}},\\;\dots\\;,\\;c\_{4,1},\\;\dots,\\;c\_{4,{\tt cutP}},\\;c^{1,1},\\;\dots,\\;c^{1,{\tt cutP}},\\;\dots\\;,\\;c^{4,1},\\;\dots,\\;c^{4,{\tt cutP}}\\;\\}$
-- A function `values`
-- A function `error`
-- A function `digits`
-- A funtion `init`
-- A function `command`
+- A function `values` outputs the hyperparameters: $\\{ \\{ {\tt cutP},\\;{\tt nPoints}  \\} ,\\; \\{ {\tt cutQai},\\;{\tt QaiShift}  \\} ,\\; \\{ \log\_{10}\epsilon,\\;{\tt WP}  \\} \\}$.
+- A function `error`outputs the 
+- A function `digits` outputs difference between the initial and final values of $\Delta$
+- A funtion `init` outputs the initial numerical values of $\Delta$, $c_{a,n}$ and $c^{a,n}$. It has the same form as `params`
+- A function `command` outputs the input line that is parsed from the ${\tt Jupyter}$ notebook used to run the numerics, to the *.wsl* file used to lauch the ${\tt C++}$ engine.
 
 ### */prototype*
 
-This directory contains a ${\tt Mathematica}$ notebook *toadd.nb* which is a prototype of our numerical procedure the Konishi state. **(J: Add notebook and describe how to use it)**
+This directory contains a ${\tt Mathematica}$ notebook *Konishi_prototype.nb* which is a {\tt Mathematica} prototype of our numerical procedure for the highest weight state of the Konishi multiplet.
 
 ## How to use the Fast QSC Solver
 
@@ -133,7 +133,8 @@ where *executable.out* should have the name
 - For type III states, use *TypeIII_exec.out*
 - For type IV states, use *TypeIV_exec.out*
 
-You will need to anticipate the Linux/Mac command with `wsl` for Windows. Once compiled (it should compile without errors, warnings are OK), ensure that the exeutable file and the ${\tt Mathematica}$ notebook are in the same directory. The ${\tt C++}$ sourcecode needs to be compiled only once. 
+You will need to anticipate the Linux/Mac command with `wsl` for Windows. 
+If you navigated to the */core* directory using the `cd` command, and then ran the above line, then your executable will also be stored in the */core* directory. If you ran the above line, after launching terminal from another directory, and giving a path to the sourecode, then your output will be stored in the directory that you launched terminal from. By default, this is usually your home directory. Once compiled (it should compile without errors, warnings are OK), ensure that the exeutable file and the ${\tt Mathematica}$ notebook are in the same directory. The ${\tt C++}$ sourcecode needs to be compiled only once. 
 
 ## Execution and Automation
 
@@ -152,7 +153,7 @@ Run the corresponding ${\tt Mathematica}$ notebook. If it runs without errors, t
 
 ### Automation using ${\tt Python}$
 
-In order to run the *.ipynb* files, you will need to install [Jupyter notebook](https://jupyter.org/). You can download it from the website or from distributions such as [Anaconda](https://www.anaconda.com/). Ensure that you `cd` back to your home directory. In order to open a ${\tt Jupyter}$ notebook, on Linux and Mac, you should type the following in the terminal
+In order to run the *.ipynb* files, you will need to install [Jupyter notebook](https://jupyter.org/). You can download it from the website or from distributions such as [Anaconda](https://www.anaconda.com/). Remember to navigate back to your home directory using for instance, the `cd` command! In order to open a ${\tt Jupyter}$ notebook, on Linux and Mac, you should type the following in the terminal
 
 `jupyter notebook`
 
