@@ -27,7 +27,7 @@ This sub-directory contains precomputed scaling dimensions for all 219 states in
 
 $\texttt{State ID}:    {}\_{\Delta\_0}[n\_{{\bf b}\_1}\\;n\_{{\bf b}\_2}\\;n\_{{\bf f}\_1}\\;n\_{{\bf f}\_2}\\;n\_{{\bf f}\_3}\\;n\_{{\bf f}\_4}\\;n\_{{\bf a}\_1}\\;n\_{{\bf a}\_2}]\_{\tt sol}$ 
 
-For example, the $\texttt{State ID}$ of the Konishi operator is ${}\_{2}[2\\;0\\;0\\;1\\;1\\;1\\;1\\;0\\;0]\_{1}$. 
+For example, the $\texttt{State ID}$ of the Konishi operator is ${}\_{2}[0\\;0\\;1\\;1\\;1\\;1\\;0\\;0]\_{1}$. 
 
 Its numerical data is stored in the *.mx* file called
 
