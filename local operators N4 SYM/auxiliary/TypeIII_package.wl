@@ -70,7 +70,7 @@ nnns=Table[Position[ParamsInPlist,ip],{ip,IndepParams}]//Flatten;
 nsFixed=Table[Position[ParamsInPlist,ip],{ip,FixedParams}]//Flatten//Sort;
 
 
-(*Adjust the size of the vector of parameters to be 2 cutP + 2*)
+(*Adjust the size of the vector of parameters to be 4 cutP + 2*)
 
 IncrBs[Plist_List]:=Block[{},
 If[Length[Flatten[Plist]]==4cutP+2,
