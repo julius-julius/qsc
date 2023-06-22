@@ -10,5 +10,3 @@ This repository has one sub-repository */Local Operators N4 SYM*, which containt
 ## Note
 
 To flag any issues for debugging, please write to [Julius Julius](mailto:juliusjulius.1729@gmail.com).
-
-test
