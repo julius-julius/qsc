@@ -9,4 +9,4 @@ This repository has one sub-repository */Local Operators N4 SYM*, which containt
 
 ## Note
 
-To flag any issues for debugging, please write to [Julius Julius](mailto:juliusjulius.1729@gmail.com).
+To flag any issues for debugging, please write to [Julius Julius](mailto:juliusjulius.1729@gmail.com). If you would like to publish your code or CFT-data for some example of the AdS/CFT integrable system, please write to [Julius Julius](mailto:juliusjulius.1729@gmail.com).
