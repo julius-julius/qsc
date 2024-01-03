@@ -1148,7 +1148,6 @@ void UJsingleVtoC(cl_N * V/*7*N0-7*/,cl_N * ptrDelta/*&Delta*/,long int nmin,lon
 
 
 
-
 /***********************************************************************/
 /*A function to compute some important Delta dependent quantities, needed to be updated at each iteration */
 
@@ -1156,27 +1155,31 @@ void Ca0func(cl_N Delta,cl_N * c[4],cl_N * cf[4], cl_N Mt[4],cl_N Mhat0[4],cl_N 
 	   cl_N B[4],cl_N BB[4][4],cl_N alfa[4][4],cl_N g,float_format_t prec){
   
 long int a,i;  
-
-/* Mhat */
+/* Mhat  */
  
 Mhat[0]=Mhat0[0]+Delta/cl_float(2,prec);
 Mhat[1]=Mhat0[1]+Delta/cl_float(2,prec);
 Mhat[2]=Mhat0[2]-Delta/cl_float(2,prec);
 Mhat[3]=Mhat0[3]-Delta/cl_float(2,prec);  
 
+/**/
 
-/*lower indexes A_a*/
+/* A_a*/
 
 for(a=0;a<=3;a++) { A[a]=VolinAfunc(a,Mt,Mhat); }
 
-/*A^a/
+/* A^a */
+
+
+for(a=0;a<=3;a++){ Af[a]=AAfunc0(a,Mt,Mhat)/A[a]; }
+
 
 /*other auxiliary 4x4 matrices e.g B_{a|i}, A_a A^i, etc.*/
 /*B_i=1 convention is assumed*/
 
 for(a=0;a<=3;a++){ 
   for(i=0;i<=3;i++){  alfa[a][i]=Mhat[i]-Mt[a];
-                      //beta[a][i]=Mt[a]-Mt[i];
+                      
   BB[a][i]=complex(0,1)*A[a]*B[i]/(Mt[a]-Mhat[i]);
   AA[a][i]=A[a]*Af[i];
  }/*i*/
